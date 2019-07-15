@@ -1,23 +1,16 @@
 FROM alpine:latest
 
-# set users cfg file
-ARG USERS_CFG=users.json
-
-RUN apk update && apk add --no-cache curl apache2 python py-pip tar
+RUN apk update && apk add --no-cache curl python tar
 
 # Fetch  brat
 RUN curl http://weaver.nlplab.org/~brat/releases/brat-v1.3_Crunchy_Frog.tar.gz | tar xvz
 
 WORKDIR brat-v1.3_Crunchy_Frog/
 
-COPY config.py user_patch.py users.json .
+COPY config.py ./
 
-RUN python user_patch.py
-
-RUN mkdir data work
-
-VOLUME data
-VOLUME work
+RUN mkdir /data /work /cfg
+RUN ln -s /data . && ln -s /work .
 
 EXPOSE 8001
 
