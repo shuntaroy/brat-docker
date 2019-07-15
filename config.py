@@ -48,13 +48,7 @@ WORK_DIR = path_join(BASE_DIR, 'work')
 # For example, user `editor` and password `annotate`:
 #
 #     'editor': 'annotate',
-if os.path.exists("/cfg/users.json"):
-    USER_PASSWORD = json.load(open("/cfg/users.json"))
-else:
-    USER_PASSWORD = {
-                'admin': 'admin',
-    #     (add USERNAME:PASSWORD pairs below this line.)
-    }
+USER_PASSWORD = json.load(open(path_join("/secrets", "users.json")))
 ########## ADVANCED CONFIGURATION OPTIONS ##########
 # The following options control advanced aspects of the brat server
 # setup.  It is not necessary to edit these in a basic brat server

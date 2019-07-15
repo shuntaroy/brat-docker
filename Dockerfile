@@ -9,8 +9,7 @@ WORKDIR brat-v1.3_Crunchy_Frog/
 
 COPY config.py ./
 
-RUN mkdir /data /work /cfg
-RUN ln -s /data . && ln -s /work .
+RUN mkdir /data /work && ln -s /data . && ln -s /work .
 
 EXPOSE 8001
 
