@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk update && apk add --no-cache curl python tar
+RUN apk update && apk add --no-cache curl python tar libmagic
 
 # Fetch  brat
 RUN curl http://weaver.nlplab.org/~brat/releases/brat-v1.3_Crunchy_Frog.tar.gz | tar xvz
