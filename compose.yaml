@@ -1,0 +1,11 @@
+services:
+  brat:
+    restart: unless-stopped
+    build: .
+    container_name: 'brat-latest'
+    ports:
+    - 55557:8001
+    volumes:
+      - ./data:/brat/data
+      - ./work:/brat/work
+      - ./users.json:/brat/users.json
