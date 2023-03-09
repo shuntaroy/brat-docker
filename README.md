@@ -7,7 +7,7 @@ Based on alpine linux with python 3, it runs the latest version of brat (i.e. th
 Furthermore, this image loads `data/` and user credentials from `users.json` in the current directory so that you can modify corpora and users without rebuilding the image.
 
 Although `standalone.py` seems to have a security risk, it is supposed to run faster than Apache CGI (according to [the official doc](http://brat.nlplab.org/installation.html#brat-standalone-server)).
-The security risk would be mitigated by containerisation, but it is still recommended to run this image with rootless docker behind a HTTPS-enabled reverse proxy.
+The security risk would be mitigated by containerisation, but it is still recommended for production to run this image with rootless docker behind a HTTPS-enabled reverse proxy.
 
 ## Build
 
