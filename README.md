@@ -38,4 +38,5 @@ mkdir data work
 docker compose up -d
 ```
 
-Open `localhost:8001` and login using credentials from `users.json`.
+Open `localhost:55557` and login using credentials from `users.json`.
+You can change the port or other configurations in `compose.yaml`.
