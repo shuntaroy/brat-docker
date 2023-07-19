@@ -2,7 +2,7 @@
 
 This is a dockerised version of the [brat rapid annotation tool](http://brat.nlplab.org/).
 
-Based on alpine linux with python 3, it runs the latest version of brat (i.e. the `master` branch, which is improved from the stable v1.3-Crunchy_Frog) using the built-in `standalone.py`.
+Based on the official python 3.8 image, it runs the latest version of brat (i.e. the `master` branch as of Oct 2021, which is improved from the stable v1.3-Crunchy_Frog) using the built-in `standalone.py`.
 
 Furthermore, this image loads `data/` and user credentials from `users.json` in the current directory so that you can modify corpora and users without rebuilding the image.
 
