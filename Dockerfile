@@ -1,10 +1,13 @@
-FROM alpine:latest
+FROM python:3.8
 
-RUN apk update && apk add --no-cache git python3 mailcap
+# FROM alpine:latest
+# RUN apk update && apk add --no-cache git python3 mailcap
 
-RUN git clone https://github.com/nlplab/brat
+RUN git clone https://github.com/nlplab/brat 
 
 WORKDIR /brat
+
+RUN git reset --hard $COMMIT_SHA
 
 COPY config.py ./
 

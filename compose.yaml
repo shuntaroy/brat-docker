@@ -9,3 +9,5 @@ services:
       - ./data:/brat/data
       - ./work:/brat/work
       - ./users.json:/brat/users.json
+    environment:
+      - 'COMMIT_SHA=44ecd825810167eed2a5d8ad875d832218e734e8'
